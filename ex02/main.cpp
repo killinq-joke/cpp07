@@ -3,42 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mout <mout@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ztouzri <ztouzri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 16:52:39 by mout              #+#    #+#             */
-/*   Updated: 2021/11/19 17:25:29 by mout             ###   ########.fr       */
+/*   Updated: 2021/11/20 11:49:45 by ztouzri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "iter.hpp"
+#include "Array.hpp"
 
-template <typename T>
-void    iter(T *arr, size_t length, void (*f)(T))
+int main(void)
 {
-    for (size_t i = 0; i < length; i++)
-    {
-        f(arr[i]);
-    }
-}
+	Array<int> a = Array<int>(10);
 
-void    ft_putchar(char c)
-{
-    write(1, &c, 1);
-}
-
-void    ft_putstrn(char *str)
-{
-    for (int i = 0; str[i]; i++)
-        ft_putchar(str[i]);
-    ft_putchar('\n');
-}
-
-int main(int ac, char **av) {
-    iter(av[0], strlen(av[0]), ft_putchar);
-    ft_putchar ('\n');
-    if (ac > 1)
-    {
-        iter(av + 1, ac - 1, ft_putstrn);
-    }
+	a[10] = 2;
     return (0);
 }
