@@ -3,23 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mout <mout@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ztouzri <ztouzri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 16:52:39 by mout              #+#    #+#             */
-/*   Updated: 2021/11/19 17:25:29 by mout             ###   ########.fr       */
+/*   Updated: 2021/11/25 13:49:55 by ztouzri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "iter.hpp"
-
-template <typename T>
-void    iter(T *arr, size_t length, void (*f)(T))
-{
-    for (size_t i = 0; i < length; i++)
-    {
-        f(arr[i]);
-    }
-}
 
 void    ft_putchar(char c)
 {
@@ -35,7 +26,7 @@ void    ft_putstrn(char *str)
 
 int main(int ac, char **av) {
     iter(av[0], strlen(av[0]), ft_putchar);
-    ft_putchar ('\n');
+    ft_putchar('\n');
     if (ac > 1)
     {
         iter(av + 1, ac - 1, ft_putstrn);

@@ -3,48 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mout <mout@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ztouzri <ztouzri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/19 16:52:39 by mout              #+#    #+#             */
-/*   Updated: 2021/11/19 17:09:39 by mout             ###   ########.fr       */
+/*   Created: 2021/11/25 13:42:49 by ztouzri           #+#    #+#             */
+/*   Updated: 2021/11/25 13:43:00 by ztouzri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "whatever.hpp"
 
-template <typename T>
-void swap(T &x, T &y)
+int main( void )
 {
-    T tmp;
-
-    tmp = x;
-    x = y;
-    y = tmp;
-}
-
-template <typename T>
-T max(T x, T y)
-{
-    if (x > y)
-        return x;
-    else
-        return y;
-}
-
-template <typename T>
-T min(T x, T y)
-{
-    if (x < y)
-        return x;
-    else
-        return y;
-}
-
-int main( void ) {
     int a = 2;
     int b = 3;
 
-    ::swap( a, b );
+    ::swap(a, b);
     std::cout << "a = " << a << ", b = " << b << std::endl;
     std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
     std::cout << "max( a, b ) = " << ::max( a, b ) << std::endl;
